@@ -22,3 +22,6 @@ export default {
   }
 }
 </script>
+<style scoped lang="scss">
+  @import './dialog.scss';
+</style>
