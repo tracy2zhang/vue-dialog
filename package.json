@@ -1,9 +1,8 @@
 {
-  "name": "vue-dialog",
-  "version": "1.0.0",
+  "name": "vue-utopia-dialog",
+  "version": "0.0.3",
   "description": "vue dialog",
   "author": "601554019@qq.com",
-  "private": true,
   "license": "MIT",
   "main": "dist/vue-dialog.js",
   "repository": {
