@@ -1,6 +1,6 @@
 {
   "name": "vue-utopia-dialog",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "vue dialog",
   "author": "601554019@qq.com",
   "license": "MIT",
@@ -9,6 +9,10 @@
     "type": "git",
     "url": "https://github.com/tracy2zhang/vue-dialog"
   },
+  "files": [
+    "dist/",
+    "src/"
+  ],
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "npm run dev",
