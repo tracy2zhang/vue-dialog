@@ -52,26 +52,3 @@
     }
   }
 </script>
-
-<style scoped lang="scss">
-  @import './dialog.scss';
-  .content {
-    padding: 0 rem(.5);
-  }
-  .title {
-    border: none;
-  }
-  .textarea {
-    width: 100%;
-    display: block;
-    font-size: .8em;
-    box-sizing: border-box;
-    padding: 10px;
-    background-color: inherit;
-    border: 1px solid #e5e5e5;
-    text-align: left;
-    resize: none;
-    background-color: inherit;
-    outline: none;
-  }
-</style>
