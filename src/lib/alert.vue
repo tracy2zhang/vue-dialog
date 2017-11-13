@@ -8,7 +8,7 @@
           <div class="desc" v-show="desc">{{ desc }}</div>
         </div>
         <div class="control">
-          <div class="btn btn-ok" @click="onOk">{{ okText }}</div>
+          <div class="btn btn-ok" :style="okStyle" @click="onOk">{{ okText }}</div>
         </div>
       </div>
     </transition>
@@ -28,7 +28,17 @@
         state: 0,
         title: '提示',
         desc: '',
-        okText: '确定'
+        okText: '确定',
+        okBgColor: '#ffcc24',
+        okColor: '#000000'
+      }
+    },
+    computed: {
+      okStyle () {
+        return {
+          color: this.okColor,
+          background: this.okBgColor
+        }
       }
     },
     methods: {
@@ -39,3 +49,6 @@
     }
   }
 </script>
+<style scoped lang="scss">
+  @import './dialog.scss';
+</style>

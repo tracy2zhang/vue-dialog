@@ -8,8 +8,8 @@
           <textarea class="textarea" v-model.trim="text" :placeholder="placeholder" rows="3"></textarea>
         </div>
         <div class="control">
-          <div class="btn btn-cancel" @click="onCancel">{{ cancelText }}</div>
-          <div class="btn btn-confirm" @click="onConfirm">{{ confirmText }}</div>
+          <div class="btn btn-cancel" :style="cancelStyle" @click="onCancel">{{ cancelText }}</div>
+          <div class="btn btn-confirm" :style="confirmStyle" @click="onConfirm">{{ confirmText }}</div>
         </div>
       </div>
     </transition>
@@ -31,7 +31,25 @@
         text: '',
         placeholder: '',
         cancelText: '取消',
-        confirmText: '确定'
+        confirmText: '确定',
+        cancelBgColor: '#eaeaea',
+        confirmBgColor: '#ffcc24',
+        cancelColor: '#000000',
+        confirmColor: '#000000'
+      }
+    },
+    computed: {
+      cancelStyle () {
+        return {
+          color: this.cancelColor,
+          background: this.cancelBgColor
+        }
+      },
+      confirmStyle () {
+        return {
+          color: this.confirmColor,
+          background: this.confirmBgColor
+        }
       }
     },
     methods: {
@@ -52,14 +70,15 @@
     }
   }
 </script>
-
 <style scoped lang="scss">
   @import './dialog.scss';
-  .content {
-    padding: 0 rem(.5);
-  }
-  .title {
-    border: none;
+  .prompt {
+    .content {
+      padding: 0 rem(.5);
+    }
+    .title {
+      border: none;
+    }
   }
   .textarea {
     width: 100%;
@@ -69,6 +88,7 @@
     padding: 10px;
     background-color: inherit;
     border: 1px solid #e5e5e5;
+    border: .5px solid #e5e5e5;
     text-align: left;
     resize: none;
     background-color: inherit;

@@ -5,6 +5,7 @@
       <button class="ui blue button" @click="confirm">Confirm</button>
       <button class="ui blue button" @click="prompt">Prompt</button>
     </div>
+    <a href="https://github.com/tracy2zhang/vue-dialog">Docs</a>
   </div>
 </template>
 
@@ -58,5 +59,12 @@ html, body {
   text-align: center;
   box-sizing: border-box;
   padding-top: 20px;
+}
+a {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
 }
 </style>

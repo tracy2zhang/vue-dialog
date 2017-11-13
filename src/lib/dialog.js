@@ -3,7 +3,6 @@ import { createElement } from './util'
 import Alert from './alert'
 import Confirm from './confirm'
 import Prompt from './prompt'
-import './dialog.scss'
 
 const map = {
   alert: {

@@ -1,15 +1,18 @@
 {
-  "name": "vue-dialog",
-  "version": "1.0.0",
+  "name": "vue-utopia-dialog",
+  "version": "0.0.9",
   "description": "vue dialog",
   "author": "601554019@qq.com",
-  "private": true,
   "license": "MIT",
   "main": "dist/vue-dialog.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/tracy2zhang/vue-dialog"
   },
+  "files": [
+    "dist/",
+    "src/"
+  ],
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "npm run dev",

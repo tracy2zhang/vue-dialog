@@ -8,8 +8,8 @@
           <div class="desc" v-show="desc">{{ desc }}</div>
         </div>
         <div class="control">
-          <div class="btn btn-cancel" @click="onCancel">{{ cancelText }}</div>
-          <div class="btn btn-confirm" @click="onConfirm">{{ confirmText }}</div>
+          <div class="btn btn-cancel" :style="cancelStyle" @click="onCancel">{{ cancelText }}</div>
+          <div class="btn btn-confirm" :style="confirmStyle" @click="onConfirm">{{ confirmText }}</div>
         </div>
       </div>
     </transition>
@@ -30,7 +30,25 @@
         title: '提示',
         desc: '',
         cancelText: '取消',
-        confirmText: '确定'
+        confirmText: '确定',
+        cancelBgColor: '#eaeaea',
+        confirmBgColor: '#ffcc24',
+        cancelColor: '#000000',
+        confirmColor: '#000000'
+      }
+    },
+    computed: {
+      cancelStyle () {
+        return {
+          color: this.cancelColor,
+          background: this.cancelBgColor
+        }
+      },
+      confirmStyle () {
+        return {
+          color: this.confirmColor,
+          background: this.confirmBgColor
+        }
       }
     },
     methods: {
@@ -45,3 +63,6 @@
     }
   }
 </script>
+<style scoped lang="scss">
+  @import './dialog.scss';
+</style>

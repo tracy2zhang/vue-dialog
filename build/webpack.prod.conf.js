@@ -24,9 +24,18 @@ var webpackConfig = merge(baseWebpackConfig, {
   devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
     path: config.build.assetsRoot,
-    library: 'Rotate', // library指定的就是你使用require时的模块名，这里便是require("Rotate")
+    filename: baseWebpackConfig.output.filename,
+    library: 'vue-dialog', // library指定的就是你使用require时的模块名，这里便是require("vue-dialog")
     libraryTarget: 'umd', //libraryTarget会生成不同umd的代码,可以只是commonjs标准的，也可以是指amd标准的，也可以只是通过script标签引入的。
     umdNamedDefine: true // 会对 UMD 的构建过程中的 AMD 模块进行命名。否则就使用匿名的 define。
+  },
+  externals: {
+    vue: {
+      root: 'Vue',
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue'
+    }
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html
