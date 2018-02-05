@@ -1,6 +1,6 @@
 $transitionDuration: .25s;
 $translate: translate(-50%, -75%);
-$width: 275px;
+$width: 280px;
 @function rem($n) {
   @return $n * 20px;
 }
@@ -17,18 +17,14 @@ $width: 275px;
   background-color: rgba(0, 0, 0, .3);
 }
 
-.dialog {
-  font-size: 14px;
-}
-
 .title {
-  padding: rem(0.5);
+  padding: 5%;
   box-sizing: border-box;
   border-bottom: 1px solid #e5e5e5;
   font-weight: 500;
 }
 .desc {
-  padding: rem(.8) rem(.5);
+  padding: 6% 4%;
   line-height: 1.5;
   font-size: .8em;
   box-sizing: border-box;
@@ -39,6 +35,7 @@ $width: 275px;
   position: fixed;
   left: 50%;
   top: 50%;
+  font-size: 14px;
   transform: $translate;
   width: $width;
   text-align: center;
@@ -49,7 +46,7 @@ $width: 275px;
 }
 
 .control {
-  padding: rem(.5);
+  padding: 4%;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -57,7 +54,7 @@ $width: 275px;
   font-family: -apple-system,Helvetica Neue,Roboto,Segoe UI,sans-serif;
   line-height: 1;
   .btn {
-    padding: rem(.5);
+    padding: 4%;
     flex: 1;
     border-radius: 2px;
   }
@@ -97,4 +94,11 @@ $width: 275px;
 }
 .fadein-enter, .fadein-leave-to {
   opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .dialog{
+    font-size: 16px;
+    width: 320px;
+  }
 }
